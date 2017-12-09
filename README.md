@@ -1,6 +1,6 @@
 # charniak-docker
 
-This docker container allows you to build, install and run the
+This docker container allows you to build, install and run the most recent version of the
 [Charniak parser (August 2006)](https://github.com/BLLIP/bllip-parser)
 (aka Charniak-Johnson reranking parser, BLLIP parser) in a docker container.
 
