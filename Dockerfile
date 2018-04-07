@@ -1,8 +1,8 @@
-FROM nlpbox/nlpbox-base:16.04
+FROM ubuntu:16.04
 MAINTAINER Arne Neumann <nlpbox.programming@arne.cl>
 
 RUN apt-get update -y && \
-    apt-get install -y make g++ flex swig2.0 python-pip && \
+    apt-get install -y git make g++ flex swig2.0 python-pip && \
     pip install pytest sh
 
 WORKDIR /opt

@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t charniak .
+
+script:
+  - docker run --entrypoint=/bin/bash -ti charniak -c py.test test_charniak.py
