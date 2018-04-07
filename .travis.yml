@@ -7,4 +7,4 @@ install:
   - docker build -t charniak .
 
 script:
-  - docker run --entrypoint=/bin/bash -ti charniak -c py.test test_charniak.py
+  - docker run --entrypoint=/bin/bash -ti charniak -c py.test /opt/bllip-parser/test_charniak.py
