@@ -1,9 +1,10 @@
+# we use ubuntu for building, as alpine's g++ is too new
+
 FROM ubuntu:16.04
 MAINTAINER Arne Neumann <nlpbox.programming@arne.cl>
 
 RUN apt-get update -y && \
-    apt-get install -y git make g++ flex swig2.0 python-pip && \
-    pip install pytest sh
+    apt-get install -y git make g++ flex
 
 WORKDIR /opt
 RUN git clone https://github.com/BLLIP/bllip-parser
@@ -13,9 +14,16 @@ RUN git clone https://github.com/BLLIP/bllip-parser
 # available on 2018-04-06).
 WORKDIR /opt/bllip-parser
 RUN git checkout -b 2018-04-06 f83be9f1453a47d5e5b9f9694da8d0950778fb99 && \
-    make && python setup.py install
+    make && rm -rf python # can't run bllip's own python tests b/c of nltk issue
 
+
+# we can't use alpine, as "make" produces dynamically linked executables
+FROM ubuntu:16.04
 ADD test_charniak.py /opt/bllip-parser/
+
+COPY --from=0 /opt/bllip-parser /opt/bllip-parser
+
+WORKDIR /opt/bllip-parser
 
 ENTRYPOINT ["./parse.sh"]  
 CMD ["/opt/bllip-parser/sample-text/sample-data.txt"]
