@@ -1,6 +1,6 @@
 # charniak-docker
 
-[![Travis Build Status](https://travis-ci.org/NLPbox/charniak-docker.svg?branch=master)](https://travis-ci.org/NLPbox/charniak-docker.svg?branch=master)
+[![Travis Build Status](https://travis-ci.org/NLPbox/charniak-docker.svg?branch=master)](https://travis-ci.org/NLPbox/charniak-docker)
 [![Docker Build Status](https://img.shields.io/docker/build/nlpbox/charniak.svg)](https://img.shields.io/docker/build/nlpbox/charniak.svg)
 
 This docker container allows you to build, install and run the
