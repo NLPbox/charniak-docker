@@ -1,7 +1,7 @@
 # charniak-docker
 
 [![Travis Build Status](https://travis-ci.org/NLPbox/charniak-docker.svg?branch=master)](https://travis-ci.org/NLPbox/charniak-docker)
-[![Docker Build Status](https://img.shields.io/docker/build/nlpbox/charniak.svg)](https://img.shields.io/docker/build/nlpbox/charniak.svg)
+[![Docker Build Status](https://img.shields.io/docker/build/nlpbox/charniak.svg)](https://hub.docker.com/r/nlpbox/charniak/builds/)
 
 This docker container allows you to build, install and run the most recent version of the
 [Charniak parser](https://github.com/BLLIP/bllip-parser)
