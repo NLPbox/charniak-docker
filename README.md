@@ -3,11 +3,6 @@
 [![Travis Build Status](https://travis-ci.org/NLPbox/charniak-docker.svg?branch=master)](https://travis-ci.org/NLPbox/charniak-docker)
 [![Docker Build Status](https://img.shields.io/docker/build/nlpbox/charniak.svg)](https://img.shields.io/docker/build/nlpbox/charniak.svg)
 
-This docker container allows you to build, install and run the
-[DPLP RST discourse parser](https://github.com/jiyfeng/DPLP)
-(Ji and Eisenstein 2014) in a docker container.
-
-
 This docker container allows you to build, install and run the most recent version of the
 [Charniak parser](https://github.com/BLLIP/bllip-parser)
 (aka Charniak-Johnson reranking parser, BLLIP parser) in a docker container.
